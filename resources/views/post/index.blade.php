@@ -22,7 +22,13 @@
       <th scope="row">{{ $post->id }}</th>
       <td>{{ $post->title }}</td>
       <td>{{ $post->slug}}</td>
-      <td>bottoni</td>
+      <td>
+        <div class="d-flex gap-2">
+          <a href="{{ route('post.show', $post->id) }}" as="button" class="btn btn-info"><i class="fa-solid fas fa-magnifying-glass"></i></a>
+          <a href="" as="button" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
+          <a href="" as="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+        </div>
+      </td>
     </tr>
     @endforeach
   </tbody>
